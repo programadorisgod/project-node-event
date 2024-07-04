@@ -1,6 +1,6 @@
 import EventEmitter from 'node:events'
-export default class TicketManager extends EventEmitter {
 
+export default class TicketManager extends EventEmitter {
     #supply = 0
 
     constructor(supply) {
