@@ -1,5 +1,5 @@
-import { transporter } from "./configNodemailer.js"
-import { html } from "./template.js";
+import { transporter } from "../config/configNodemailer.js"
+import { html } from "../utils/template.js";
 
 export default class EmailService {
     async send(props) {

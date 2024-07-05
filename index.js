@@ -1,5 +1,6 @@
-import EmailService from "./emailService.js"
-import TicketManager from "./TicketManager.js"
+import EmailService from "./Services/emailService.js"
+import TicketManager from "./Entity/TicketManager.js"
+import { logger } from "./utils/logger.js"
 
 const ticketManager = new TicketManager(40)
 const emailService = new EmailService
@@ -17,4 +18,10 @@ ticketManager.on("buy", async (...props) => {
 
 testEmail.forEach(user => {
     ticketManager.buy(user.email, user.price)
+})
+
+
+process.on('uncaughtException', (err) => {
+    const message = err + '  '
+    logger(message)
 })

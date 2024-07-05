@@ -13,5 +13,8 @@
   "description": "",
   "dependencies": {
     "nodemailer": "^6.9.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9"
   }
 }
